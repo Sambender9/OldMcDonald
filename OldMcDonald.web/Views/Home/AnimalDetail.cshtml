@@ -1,0 +1,15 @@
+﻿@model Application.data.models.Animal
+
+<table class=" table table-responsive">
+    <tr><th>Name</th></tr>
+    <tr><th>Type</th></tr>
+    <tr><th>Picture</th></tr>
+
+</table>
+<table>
+    <tr>
+        <td>@Model.Name</td>
+        <td>@Model.type</td>
+        <td><img src="@Model.PictrueOfAnimal" height="400" width="400" /></td>
+    </tr>
+</table>

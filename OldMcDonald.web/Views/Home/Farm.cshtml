@@ -1,0 +1,19 @@
+﻿@model List<Application.data.models.Farm>
+
+<h1>Take a look at our beautiful Farms!</h1>
+<table class="table table-respoonsive">
+    <tr>
+        <th><h1><font color="blue">Name Of Farm </font></h1></th>
+        <th><h1><font color="blue">Address Of Farm</font></h1></th>
+        <th><h1><font color="blue">Picture Of Farm</font></h1></th>
+    </tr>
+    @foreach(var temporaryHolder in Model)
+    {
+        <tr>
+            <td><font color="green">@temporaryHolder.Name<a href="/Home/Farm/@temporaryHolder.Id" class="btn btn-danger">Delete</a></font></td>
+            <td><img src="@temporaryHolder.PictureOfFarm" alt="Picture of a Farm" height="200" width="200" /></td>
+            <td><font color="green"><font size="2">@temporaryHolder.AddressOfFarm</font></font></td>
+        </tr>
+    }
+</table>
+<a href="/Home/Farm"></a>

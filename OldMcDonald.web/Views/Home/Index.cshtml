@@ -1,0 +1,21 @@
+﻿@model List<Application.data.models.Animal>
+<table class="table-responsive ">
+    <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Picture</th>
+    </tr>
+    @foreach (var tempHolder in Model) 
+    { 
+    <tr>
+        <td>@tempHolder.Name</td>
+
+        <td>@tempHolder.type</td>
+
+        <td>
+        <a href="/Home/AnimalDetail/@tempHolder.Id"><img src="@tempHolder.PictrueOfAnimal" width="200" height="200" /></a>
+        </td>
+    </tr>
+    }
+</table>
+    

@@ -1,0 +1,27 @@
+﻿@model OldMcDonald.web.Models.AddEditVM
+@{
+    ViewBag.Title = "AddAnimal";
+}
+<body background="http://www.ezwebrus.com/wallpapers/animal/giraffe.jpg">
+    <h2><font color="white">Please add your Animal in the boxes below</font></h2>
+    <form method="post">
+        <font style="color: white; font-size: 1.5em;" />
+        @*@Html.HiddenFor(x=> x.Pet.Id)*@
+        Enter Name
+        @Html.EditorFor(x => x.Animal.Name)<br />
+        Enter Picture URL
+        @Html.EditorFor(x => x.Animal.PictrueOfAnimal)<br />
+        Enter Farm ID
+        @Html.EditorFor(x => x.Animal.Id)<br />
+        Enter Type
+        @Html.EditorFor(x => x.Animal.type)<br />
+        <input class="btn btn-success" type="submit" value="@Model.ButtonMessage" />
+    </form>
+    @if (Model.ButtonMessage == "Submit Changes")
+    {
+        <form method="post">
+            <input class="btn btn-danger" type="submit" value="Delete" />
+        </form>
+    }
+</body>
+<a href="/Home/AddAnimal"
